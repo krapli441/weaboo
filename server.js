@@ -11,3 +11,10 @@ const home = (req, res) => {
 };
 
 app.use(loggerMiddleWare);
+app.get("/", home);
+
+const handleListening = () => {
+  console.log(`Server listening on port http://localhost:${PORT}`);
+};
+
+app.listen(PORT, handleListening);
