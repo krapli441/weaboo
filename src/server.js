@@ -5,17 +5,19 @@ const PORT = 3000;
 
 const app = express();
 const logger = morgan("dev");
-
-const globalRouter = express.Router();
-const userRouter = express.Router();
-const videoRouter = express.Router();
-
-const home = (req, res) => {
-  return res.send("boo boo weaboo");
-};
-
 app.use(logger);
-app.get("/", home);
+
+
+
+
+
+
+
+
+
+app.use("/", globalRouter);
+app.use("/users", userRouter);
+app.use("/videos", videoRouter);
 
 const handleListening = () => {
   console.log(`Server listening on port http://localhost:${PORT}`);
