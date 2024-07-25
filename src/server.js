@@ -4,13 +4,17 @@ import morgan from "morgan";
 const PORT = 3000;
 
 const app = express();
-const loggerMiddleWare = morgan("dev");
+const logger = morgan("dev");
+
+const globalRouter = express.Router();
+const userRouter = express.Router();
+const videoRouter = express.Router();
 
 const home = (req, res) => {
   return res.send("boo boo weaboo");
 };
 
-app.use(loggerMiddleWare);
+app.use(logger);
 app.get("/", home);
 
 const handleListening = () => {
