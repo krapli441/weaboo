@@ -7,3 +7,5 @@ const handleWatchVideo = (req, res) => {
 };
 
 videoRouter.get("/watch", handleWatchVideo);
+
+export default videoRouter;

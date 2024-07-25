@@ -7,3 +7,5 @@ const handleHome = (req, res) => {
 };
 
 globalRouter.get("/", handleHome);
+
+export default globalRouter;

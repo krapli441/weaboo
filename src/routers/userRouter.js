@@ -7,3 +7,5 @@ const handleEditUser = (req, res) => {
 };
 
 userRouter.get("/edit", handleEditUser);
+
+export default userRouter;
