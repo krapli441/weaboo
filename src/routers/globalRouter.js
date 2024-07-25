@@ -5,6 +5,6 @@ import { trending } from "../controllers/videoControllers";
 const globalRouter = express.Router();
 
 globalRouter.get("/", trending);
-globalRouter.ger("/join", join);
+globalRouter.get("/join", join);
 
 export default globalRouter;
